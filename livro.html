@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site do Livro</title>
+</head>
+<body>
+    <script type = "text/javascript">
+        function iniciar() {
+            document.write("<h1>" + "Elementos Containers" + "</h1>");
+            document.write("Você está usando o navegador " + navigator.appName + "na sua versão " + navigator.appVersion);
+        }
+        function login() {
+            var nome = prompt ("Qual é o seu nome?", "Zé Lucão");
+            resultado.innerHTML = "Olá, " + nome + "!";
+        }
+    </script>
+    <h1>Identificação</h1>
+    <input type="button" value="Login" onclick="login()">
+    <hr>
+    <div id="resultado"></div>
+    <hr>
+    <h1>Estruturas de Controle</h1>
+    <script type="text/javascript">
+        function controle() {
+            var hoje = new Date();       
+            var diaSemana = hoje.getDay();
+            var nomeDiaSemana = "";
+            switch(diaSemana) {
+                case 0:
+                    nomeDiaSemana = "Domingo";
+                case 1:
+                    nomeDiaSemana ="Segunda Feira";
+                    break;
+                case 2:
+                    nomeDiaSemana = "Terça Feira";
+                    break;
+                case 3:
+                    nomeDiaSemana = "Quarta Feira";
+                    break;
+                case 4:
+                    nomeDiaSemana = "Quinta Feira";
+                    break;
+                case 5:
+                    nomeDiaSemana = "Sexta Feira";
+                    break;
+                case 6:
+                    nomeDiaSemana = "Sábado";
+            }
+            dia.innerHTML = "Hoje é " + nomeDiaSemana;
+        }
+    </script>
+    <input type="button" value="Controle" onclick="controle()">
+    <hr>
+    <div id = "dia"></div>
+    <hr>
+    <h1>Testando o Do-While</h1>
+    <script type="text/javascript">
+        function contarPares() {
+            var i = 0;
+            do {
+                document.write(" " + i);
+                i += 2;
+            }
+            while (i <= 10);
+        }
+    </script>
+    <input type="button" value="Pares" onclick="contarPares()">
+    <hr>
+    <h1>Testando o Array</h1>
+    <script type="text/javascript">
+        function bigtech() {
+            document.write("<h1>" + "Bigtechs" + "</h1>");
+            var bigtechs = new Array("Samsung", "Apple", "Motorola", "Google", "Microsoft");
+            for (i = 0; i < bigtechs.length; i++) {
+                document.write(bigtechs[i] + "<br>");
+            }
+        }
+    </script>
+    <input type="button" value="Bigtechs" onclick="bigtech()">
+</body>
+</html>
